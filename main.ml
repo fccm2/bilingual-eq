@@ -38,22 +38,30 @@ let print_para (word, trans_word, p1, p2) =
 ;;
 
 
-let () =
-  let dh = Dict.load () in
+let files = [
+  "./html/The_Lost_World.html";
+  "./html/The_Hound_of_the_Baskervilles.html";
+  "./html/The_Confessions_of_Arsene_Lupin.html";
+  "./html/Arsene_Lupin_Gentleman_Burglar.html";
+  "./html/Alice_s_Adventures_in_Wonderland.html";
+  "./html/The_Three_Musketeers.html";
+  "./html/Treasure_Island.html";
+  "./html/Camille.html";
+]
 
-  let paras = [] in
-  let paras = Paras.load paras ~filename:"./The_Lost_World.html" in
-  let paras = Paras.load paras ~filename:"./The_Hound_of_the_Baskervilles.html" in
-  let paras = Paras.load paras ~filename:"./The_Confessions_of_Arsene_Lupin.html" in
-  let paras = Paras.load paras ~filename:"./Arsene_Lupin_Gentleman_Burglar.html" in
-  let paras = Paras.load paras ~filename:"./Alice_s_Adventures_in_Wonderland.html" in
-  let paras = Paras.load paras ~filename:"./The_Three_Musketeers.html" in
-  let paras = Paras.load paras ~filename:"./Treasure_Island.html" in
-  let paras = Paras.load paras ~filename:"./Camille.html" in
+
+let () =
+  let ds = Dict.load "./en-to-fr.ss" in
+
+  let paras =
+    List.fold_left (fun paras filename ->
+      Paras.load paras ~filename
+    ) [] files
+  in
 
   print_head ();
 
-  Hashtbl.iter (fun word translations ->
+  List.iter (fun (word, translations) ->
     List.iter (fun (p1, p2) ->
       let p1, p2 = (p2, p1) in
       match Strings.replace p1 (pat word) with
@@ -67,6 +75,6 @@ let () =
 
           ) translations;
     ) paras;
-  ) dh;
+  ) ds;
 
   ()
