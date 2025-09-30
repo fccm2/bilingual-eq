@@ -26,13 +26,16 @@ let pat w = [
 ]
 
 
-let print_para = (fun (word, trans_word, p1, p2) ->
-    print_endline "<table>";
-    Printf.printf "<tr><td class='fr'><b>%s</b></td><td class='en'><b>%s</b></td></tr>\n" trans_word word;
-    Printf.printf "<tr><td class='fr'>\n%s\n</td><td class='en'>\n%s</td></tr>\n" p2 p1;
-    print_endline "</table>";
-    print_newline ()
+let print_para (word, trans_word, p1, p2) =
+  print_string (
+    String.concat "" [
+      Printf.sprintf "<table>";
+      Printf.sprintf "<tr><td class='fr'><b>%s</b></td><td class='en'><b>%s</b></td></tr>\n" trans_word word;
+      Printf.sprintf "<tr><td class='fr'>\n%s\n</td><td class='en'>\n%s</td></tr>\n" p2 p1;
+      Printf.sprintf "</table>\n";
+    ]
   )
+;;
 
 
 let () =
