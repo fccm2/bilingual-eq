@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Bilingual Word Equivalence</title>
+<style type="text/css">
+body {
+  margin:0;
+  padding:0;
+  background:#F4F4F4 repeat-x url("bggrad.png");
+}
+#content a {
+  color:#283;
+}
+#content a:hover {
+  background:#DFE;
+  color:#162;
+}
+#content a:active {
+  background:#FED;
+  color:#F64;
+}
+div#header,
+div#nav,
+div#content,
+div#footer {
+  margin-left:10%;
+  margin-right:16%;
+  margin-top:0;
+  margin-bottom:0;
+  margin:0;
+  background:#FEE;
+}
+div#all {
+  margin-left:10%;
+  margin-right:16%;
+  margin-top:0;
+  margin-bottom:0;
+  padding:0;
+  min-width:700px;
+  box-shadow:-1px 2px 10px 1px rgba(0,0,0,0.3);
+}
+div#header {
+  height:2.6em;
+  padding:1.0em 0.6em;
+  background:#FFF;
+}
+div#header span {
+  font-size:1.6em;
+  color:#888;
+  font-weight:bold;
+}
+div#nav {
+  background:#EEE;
+  padding:0.3em 0.4em;
+}
+div#nav span {
+  margin:0.2em 0.8em;
+}
+div#nav a {
+  color:#000;
+  text-decoration:none;
+}
+div#nav a:hover {
+  text-decoration:underline;
+}
+div#nav a:active {
+  color:#F64;
+}
+div#content {
+  background:#FFF;
+  padding:0.6em 0.8em;
+  padding-left:2em;
+  color:#444;
+}
+div#content div {
+  margin-bottom:0.8em;
+}
+h1.title {
+  font-size:1.2em;font-weight:normal;
+  margin-bottom:0.8em;
+}
+div#footer {
+  padding:0.6em 0.8em;
+  background:#EEE;
+  color:#444;
+}
+table {
+  border-top:1px solid #DDD;
+}
+div#eqs {
+  padding:0.5em 0;
+}
+td {
+  width:50%;
+  margin:0;
+  background:#FFF;
+  padding:0.2em 0.6em;
+  vertical-align:top;
+}
+td p {
+  margin:0;
+  padding:0;
+  font-size:0.8em;
+}
+</style>
+</head>
+<body>
+
+<div id="all">
+
+  <div id="header">
+    <span>Bilingual Word Equivalences</span>
+  </div>
+
+  <div id="nav">
+    <span><a href="index.html">Home</a></span> |
+    <span><a href="_about.html">About</a></span> |
+    <span><a href="_contact.html">Contact</a></span> |
+    <span><a href="_links.html">Links</a></span> |
+    <span><a href="/bilingual-books/">Bilingual Books</a></span>
+  </div>
+
+  <div id="content">
+    <h1 class="title">About</h1>
+
+    <div><em>How this website has been built?</em></div>
+
+    <div id="eqs">
+
+      <p>
+        This website was built using contents from the <b>Wiktionary</b> and <b>WikiSource</b>.
+      </p>
+
+      <p>
+        I'm extracting words equivalences from the <a
+          href="https://dumps.wikimedia.org/enwiktionary/latest/enwiktionary-latest-pages-articles.xml.bz2"
+          >wiktionary dump</a>.<br />
+        This is not a hard task, the script looks quite similar than the scripts
+        that you can find on
+        <a href="https://rosettacode.org/wiki/WiktionaryDumps_to_words">this page</a>.
+      </p>
+
+      <p>
+      	The bilingual books were made from public domain books found on
+        <a href="https://en.wikisource.org/">WikiSource</a>.<br />
+        Making one bilingual book usually require me about one day.<br />
+        This current version of the web site currently uses 9 bilingual books.<br />
+        I'm not using an automatic program to parallelise the books like
+        <a href="https://farkastranslations.com/bilingual_books.php">Andras Farkas</a>,
+        I'm just using a couple of scripts like <a href="./combine.ml">this one</a>.<br />
+        Then the pages content are generated using this
+        <a href="./geneq.ml">small script</a>.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <span>&copy; 2022 bilingual-eq</span>
+  </div>
+
+</div>
+
+</body>
+</html>
