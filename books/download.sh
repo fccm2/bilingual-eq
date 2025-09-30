@@ -1,0 +1,9 @@
+wget http://decapode314.free.fr/bilingual-eq/html/Alice_s_Adventures_in_Wonderland.html
+wget http://decapode314.free.fr/bilingual-eq/html/Arsene_Lupin_Gentleman_Burglar.html
+wget http://decapode314.free.fr/bilingual-eq/html/Camille.html
+wget http://decapode314.free.fr/bilingual-eq/html/The_Adventures_of_Sherlock_Holmes.html
+wget http://decapode314.free.fr/bilingual-eq/html/The_Confessions_of_Arsene_Lupin.html
+wget http://decapode314.free.fr/bilingual-eq/html/The_Hound_of_the_Baskervilles.html
+wget http://decapode314.free.fr/bilingual-eq/html/The_Lost_World.html
+wget http://decapode314.free.fr/bilingual-eq/html/The_Three_Musketeers.html
+wget http://decapode314.free.fr/bilingual-eq/html/Treasure_Island.html
