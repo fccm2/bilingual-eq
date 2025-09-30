@@ -1,0 +1,3 @@
+To the extent permitted by law, you can use, modify, and redistribute this package
+with any license standardized by the spdx, or any license approuved by the fsf.
+
