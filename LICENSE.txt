@@ -1,3 +1,4 @@
-To the extent permitted by law, you can use, modify, and redistribute this package
-with any license standardized by the spdx, or any license approuved by the fsf.
+To the extent permitted by law, you can use, study, modify, and redistribute
+the sources of this website, with any license standardized by the spdx, or any
+license approuved by the fsf.
 
